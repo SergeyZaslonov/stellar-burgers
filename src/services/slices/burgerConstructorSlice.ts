@@ -1,4 +1,4 @@
-import { orderBurgerApi } from '@api';
+import { orderBurgerApi } from '../../utils/burger-api';
 import {
   createAsyncThunk,
   createSlice,
@@ -12,7 +12,7 @@ export const createBurgerOrder = createAsyncThunk(
   orderBurgerApi
 );
 
-type TOrderBurgerState = {
+export type TOrderBurgerState = {
   bun: TIngredient | null;
   ingredients: Array<TConstructorIngredient>;
   loading: boolean;
