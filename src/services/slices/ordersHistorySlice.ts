@@ -4,13 +4,13 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 export const getOrdersThunk = createAsyncThunk('orders/history', getOrdersApi);
 
-export type TOrdersHistoryState = {
+type TOrdersHistoryState = {
   orders: TOrder[];
   loading: boolean;
   error: string | undefined;
 };
 
-const initialState: TOrdersHistoryState = {
+export const initialState: TOrdersHistoryState = {
   orders: [],
   loading: false,
   error: undefined

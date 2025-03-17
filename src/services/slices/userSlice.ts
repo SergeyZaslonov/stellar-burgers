@@ -59,14 +59,14 @@ export const checkUserAuth = createAsyncThunk(
   }
 );
 
-export type TUserState = {
+type TUserState = {
   isAuthChecked: boolean;
   loading: boolean;
   user: TUser | null;
   error: string | undefined;
 };
 
-const initialState: TUserState = {
+export const initialState: TUserState = {
   isAuthChecked: false,
   loading: false,
   user: null,

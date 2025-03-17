@@ -12,7 +12,7 @@ export const createBurgerOrder = createAsyncThunk(
   orderBurgerApi
 );
 
-export type TOrderBurgerState = {
+type TOrderBurgerState = {
   bun: TIngredient | null;
   ingredients: Array<TConstructorIngredient>;
   loading: boolean;
@@ -20,7 +20,7 @@ export type TOrderBurgerState = {
   error: string | undefined;
 };
 
-const initialState: TOrderBurgerState = {
+export const initialState: TOrderBurgerState = {
   bun: null,
   ingredients: [],
   loading: false,

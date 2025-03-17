@@ -4,18 +4,10 @@ import {
   moveIngredient,
   orderBurgerSlice,
   removeIngredient,
-  TOrderBurgerState
+  initialState
 } from './burgerConstructorSlice';
 
 describe('Проверка редьюсера orderBurgerSlice', () => {
-  const initialState: TOrderBurgerState = {
-    bun: null,
-    ingredients: [],
-    loading: false,
-    order: null,
-    error: undefined
-  };
-
   const bun = {
     id: '111111',
     _id: '643d69a5c3f7b9001cfa093c',
@@ -30,7 +22,7 @@ describe('Проверка редьюсера orderBurgerSlice', () => {
     image_mobile: 'https://code.s3.yandex.net/react/code/bun-02-mobile.png',
     image_large: 'https://code.s3.yandex.net/react/code/bun-02-large.png',
     __v: 0
-};
+  };
 
   const main = {
     id: '222222',
@@ -64,7 +56,8 @@ describe('Проверка редьюсера orderBurgerSlice', () => {
     __v: 0
   };
 
-  const filledState: TOrderBurgerState = {
+  const filledState = {
+    ...initialState,
     bun: bun,
     ingredients: [main, sauce],
     loading: false,

@@ -2,19 +2,10 @@ import {
   feedSlice,
   getAllFeeds,
   getOrderByNumber,
-  TFeedState
+  initialState
 } from './feedSlice';
 
 describe('Проверка слайса feedSlice', () => {
-  const initialState: TFeedState = {
-    orders: [],
-    total: 0,
-    totalToday: 0,
-    loading: false,
-    error: undefined,
-    orderByNumber: null
-  };
-
   const feedTest = {
     success: true,
     orders: [

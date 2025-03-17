@@ -9,7 +9,7 @@ export const getOrderByNumber = createAsyncThunk(
   getOrderByNumberApi
 );
 
-export type TFeedState = {
+type TFeedState = {
   orders: TOrder[];
   total: number;
   totalToday: number;
@@ -18,7 +18,7 @@ export type TFeedState = {
   orderByNumber: TOrder | null;
 };
 
-const initialState: TFeedState = {
+export const initialState: TFeedState = {
   orders: [],
   total: 0,
   totalToday: 0,

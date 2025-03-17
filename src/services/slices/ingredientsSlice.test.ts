@@ -1,16 +1,10 @@
 import {
   getAllIngredients,
   ingredientsSlice,
-  TIngredientsState
+  initialState
 } from './ingredientsSlice';
 
 describe('Проверка редьюсера feedSlice', () => {
-  const initialState: TIngredientsState = {
-    ingredients: [],
-    loading: false,
-    error: undefined
-  };
-
   const ingredientsTest = [
     {
       _id: '643d69a5c3f7b9001cfa093c',

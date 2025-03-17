@@ -1,16 +1,10 @@
 import {
   getOrdersThunk,
   ordersHistorySlice,
-  TOrdersHistoryState
+  initialState
 } from './ordersHistorySlice';
 
 describe('Проверка слайса ordersHistorySlice', () => {
-  const initialState: TOrdersHistoryState = {
-    orders: [],
-    loading: false,
-    error: undefined
-  };
-
   const ordersHistoryTest = [
     {
       _id: '67b84bd8133acd001be5297c',

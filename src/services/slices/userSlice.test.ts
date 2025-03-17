@@ -4,19 +4,12 @@ import {
   logoutUser,
   registerUser,
   setIsAuthChecked,
-  TUserState,
+  initialState,
   updateUser,
   userSlice
 } from './userSlice';
 
 describe('Проверка аутентификации и слайса пользователя', () => {
-  const initialState: TUserState = {
-    isAuthChecked: false,
-    loading: false,
-    user: null,
-    error: undefined
-  };
-
   const userTest = {
     email: 'user100@mail.ru',
     name: 'user100'
