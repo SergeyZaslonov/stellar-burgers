@@ -1,5 +1,5 @@
 import { TOrder } from '@utils-types';
-import { getOrdersApi } from '@api';
+import { getOrdersApi } from '../../utils/burger-api';
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 export const getOrdersThunk = createAsyncThunk('orders/history', getOrdersApi);
@@ -10,7 +10,7 @@ type TOrdersHistoryState = {
   error: string | undefined;
 };
 
-const initialState: TOrdersHistoryState = {
+export const initialState: TOrdersHistoryState = {
   orders: [],
   loading: false,
   error: undefined

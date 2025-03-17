@@ -13,11 +13,11 @@ import {
   registerUserApi,
   updateUserApi,
   logoutApi
-} from '@api';
+} from '../../utils/burger-api';
 import { TUser } from '@utils-types';
 import { deleteCookie, getCookie, setCookie } from '../../utils/cookie';
 
-const getUser = createAsyncThunk('user/getUser', getUserApi);
+export const getUser = createAsyncThunk('user/getUser', getUserApi);
 
 export const loginUser = createAsyncThunk(
   'user/login',
@@ -66,7 +66,7 @@ type TUserState = {
   error: string | undefined;
 };
 
-const initialState: TUserState = {
+export const initialState: TUserState = {
   isAuthChecked: false,
   loading: false,
   user: null,
@@ -136,7 +136,7 @@ export const userSlice = createSlice({
   }
 });
 
-const { setIsAuthChecked } = userSlice.actions;
+export const { setIsAuthChecked } = userSlice.actions;
 export const {
   getIsAuthChecked,
   getIsUserRequest,
