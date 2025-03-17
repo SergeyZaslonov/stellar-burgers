@@ -35,3 +35,7 @@
 //     }
 //   }
 // }
+
+Cypress.Commands.add('clickChildButton', (label: string) => {
+  cy.get(label).children('button').click();
+});
